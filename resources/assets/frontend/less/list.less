@@ -1,0 +1,59 @@
+.list-content{
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  .no-data{
+    color: #999;
+    font-weight: 400;
+    padding: 60px;
+    text-align: center;
+    font-size: 22px;
+  }
+  .news-item{
+    >a{
+      text-decoration: none;
+      color: #444;
+    }
+    margin: 10px 0;
+    height: 395px;
+    background-color: #fff;
+    position: relative;
+    box-sizing: content-box;
+    transition: all .2s;
+    &:hover{
+      z-index: 1;
+      transform: scale(1.01);
+      box-shadow: 0 49.5px 70px -24.5px rgba(0,0,0,0.3);
+    }
+    &.top::before{
+      content: "置顶";
+      background-color: #d43f3a;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      font-size: 12px;
+      padding: 3px 4px;
+    }
+    .left{
+      padding: 35px;
+      width: 250px;
+      position: absolute;
+      left: 0;
+      height: 100%;
+      h3{
+        line-height: 35px;
+      }
+      .author{
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+      }
+    }
+    .img-wrap{
+      margin-left: 250px;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+}
