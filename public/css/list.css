@@ -1,0 +1,66 @@
+/* 导航栏 */
+.nav{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    z-index: 2;
+}
+.container-nav{
+    height: 60px;
+    background: #ffffff;
+    border-radius: 3px;
+    font-family: 'Microsoft YaHei';
+}
+.container-nav>ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+.container-nav>ul>li{
+    float: left;
+    transition:background .3s;
+    position: relative;
+    list-style-type: none;
+    position: relative;
+}
+.container-nav>ul>li.active{
+    background:  #2875B1;
+    color: #000;
+}
+.container-nav>ul>li.active a{
+    color: #ffffff;
+}
+.container-nav>ul>li.active a:hover{
+    color: #666666;
+}
+.container-nav>ul>li>a{
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 15px 0px;
+    line-height: 60px;
+    color: #666666;
+    font-size: 16px;
+
+}
+.container-nav>ul>li:hover{
+    background: #2875B1;
+    border-bottom: 2px solid #cccccc;
+}
+.container-nav .content{
+    position: absolute;
+    background-color: #fff;
+    width: 120px;
+    display: none;
+    left: 0;
+    margin-top: 2px;
+}
+.container-nav .content>li>a{
+    text-align: center;
+    display: block;
+    color: #333;
+    padding: 10px 0;
+}
+.container-nav .content>li>a:hover{
+    background: #2875B1;
+}
