@@ -57,7 +57,7 @@ class PostsController extends Controller
         $posts = Post::withSimpleSearch($keywords, ['title', 'excerpt'])
             ->applyFilter(collect(['status' => Post::STATUS_PUBLISH]))
             ->with('user')
-            ->paginate($this->perPage());
+            ->paginate($this->perPage())->appends(['keywords' => $keywords]);
         //return view('search', ['posts' => $posts, 'keywords' => $keywords]);
         return view_first(['search'], 'search', [
             'posts' => $posts,
